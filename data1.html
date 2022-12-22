@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>Halaman 1</title>
+</head>
+<body>
+    <?php if( isset($_POST["name"])) ?>
+<form action="data2.php" method="post">
+    Masukan Nama : 
+    <input type="text" name="nama">
+    <br>
+    Masukan Jenis Kelamin :
+    <input type="radio" name="jk" value="Laki-Laki" checked=""> Laki-laki 
+    <input type="radio" name="jk" value="Perempuan"> Perempuan
+    <br>
+    Masukan Alamat :
+    <textarea name="alamat" cols="20" rows="5" placeholder="Tulis alamatmu"></textarea><br>
+    Masukan Hobi :
+    <input type="checkbox" name="hobi[]" value="Sepedaan">Sepedaan
+    <input type="checkbox" name="hobi[]" value="Blusukan">Blusukan
+    <input type="checkbox" name="hobi[]" value="Eksis di Medsos">Eksis di Medsos
+    <input type="checkbox" name="hobi[]" value="Balapan">Balapan
+    <br>
+    Masukan Tanggal Lahir :
+    <input type="date" name="tgl_lahir" min="2000-01-01" max="2022-12-31">
+    <br>
+    Masukan Pekerjaan :
+    <select name="pekerjaan">
+        <option disabled="" selected="">-Pilih pekerjaan-</option>
+        <option value="nganggur">Nganggur</option>
+        <option value="serabutan">Serabutan</option>
+        <option value="jalan-jalan">Jalan-jalan</option>
+    </select>
+    <br>
+    Masukan Jurusan Yang Di Ambil :
+    <input type="text" list="jurusans" name="jurusan">
+        <datalist id="jurusans">
+            <option value="Teknik Informatika">Teknik Informatika </option>
+            <option value="Sistem Informasi">Sistem Informasi </option>
+            <option value="Teknik Kimia">Teknik Kimia </option>
+            <option value="Matematika">Matematika</option>
+            <option value="Fisika">Fisika </option>
+            <option value="Teknik Elektro">Teknik Elektro </option>
+        </datalist>
+    <br>
+    <button type="submit" name="submit">Kirim!</button>
+</form>
+
+</body>
+</html>
